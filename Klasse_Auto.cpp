@@ -9,7 +9,7 @@ float Klasse_Auto::fahren(float strecke)
 
 	strecke = tankinhalt - (spritverbrauch / 100.f);
 
-	cout << "Es wurde eine Strecke von ";
+	cout << "Es wurde eine Strecke von " << strecke << "km zurückgelegt.";
 }
 
 //Konstruktoren definieren:
@@ -54,4 +54,13 @@ Klasse_Auto::~Klasse_Auto()
 {
 
 }
-
+ 
+//Tankinhalt füllen
+int tankinhalt;
+int gettankinhalt() const { return tankinhalt; }
+bool settankinhalt(int Tankinhalt)
+{
+	if ((Tankinhalt < 0) || (Tankinhalt > 43)) return false;
+	tankinhalt = Tankinhalt;
+	return true;
+}
