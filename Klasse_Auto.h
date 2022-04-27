@@ -12,9 +12,29 @@ private:
 	int tankinhalt;
 	int tankgroesse;
 public:
+	float fahren(float strecke);
+
+	//Standartkonstruktor:
 	Klasse_Auto();
-	Klasse_Auto(int A,string B,int C,int D,int E,int F,int G) :radzahl{ A },farbe{ B },ps{ C },anzahl_sitze{ D },spritverbrauch{ E },tankinhalt{ F },tankgroesse{ G }
-	{}
+
+	//allgemeiner Konstruktor:
+	Klasse_Auto(int Radzahl, string Farbe, int Ps, int Anzahl_Sitze, int Spritverbrauch, int Tankinhalt, int Tankgroesse);
+	
+
+	//Kopierkonstruktor:
 	Klasse_Auto(const Klasse_Auto& c);
+
+	//Destruktor:
 	~Klasse_Auto();
+
+	//Getter-&Setter-Methoden
+	int getradzahl();
+	int getfarbe();
+	int getps();
+	int getanzahl_sitze();
+	int getspritverbrauch();
+	int gettankinhalt();
+	int settankinhalt();
+	int gettankgroesse();
+
 };
