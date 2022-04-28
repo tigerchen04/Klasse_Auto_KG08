@@ -20,4 +20,15 @@ static Klasse_Auto Auto_2 = Klasse_Auto();
 //Objekt erstellen auf dem Heap:
 Klasse_Auto* Auto_3 = new Klasse_Auto();
 delete Auto_3;
+	
+//Methoden
+cout << "Radzahl: " << Auto_1.getradzahl() << ", Farbe: " << Auto_1.getfarbe() << ", PS: " << Auto_1.getps() << ", Anzahl Sitze: " << Auto_1.getanzahl_sitze() << ", Spritverbrauch: " << Auto_1.getspritverbrauch() << ", Tankinhalt: " << Auto_1.gettankinhalt() << ", Tankgrosse: " << Auto_1.gettankgroesse() << endl;
+cout << "Fahren: " << Auto_1.fahren(10) << endl;
+cout << "Radzahl: " << Auto_1.getradzahl() << ", Farbe: " << Auto_1.getfarbe() << ", PS: " << Auto_1.getps() << ", Anzahl Sitze: " << Auto_1.getanzahl_sitze() << ", Spritverbrauch: " << Auto_1.getspritverbrauch() << ", Tankinhalt: " << Auto_1.gettankinhalt() << ", Tankgrosse: " << Auto_1.gettankgroesse() << endl;
+cout << "Fahren: " << Auto_1.fahren(25) << endl;
+cout << "Radzahl: " << Auto_1.getradzahl() << ", Farbe: " << Auto_1.getfarbe() << ", PS: " << Auto_1.getps() << ", Anzahl Sitze: " << Auto_1.getanzahl_sitze() << ", Spritverbrauch: " << Auto_1.getspritverbrauch() << ", Tankinhalt: " << Auto_1.gettankinhalt() << ", Tankgrosse: " << Auto_1.gettankgroesse() << endl;
+Auto_1.settankinhalt(43);
+cout << "Auto wurde aufgetankt" << endl;
+cout << "Radzahl: " << Auto_1.getradzahl() << ", Farbe: " << Auto_1.getfarbe() << ", PS: " << Auto_1.getps() << ", Anzahl Sitze: " << Auto_1.getanzahl_sitze() << ", Spritverbrauch: " << Auto_1.getspritverbrauch() << ", Tankinhalt: " << Auto_1.gettankinhalt() << ", Tankgrosse: " << Auto_1.gettankgroesse() << endl;
+
 };
