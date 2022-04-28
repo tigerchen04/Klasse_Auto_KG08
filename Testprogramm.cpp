@@ -31,4 +31,5 @@ Auto_1.settankinhalt(43);
 cout << "Auto wurde aufgetankt" << endl;
 cout << "Radzahl: " << Auto_1.getradzahl() << ", Farbe: " << Auto_1.getfarbe() << ", PS: " << Auto_1.getps() << ", Anzahl Sitze: " << Auto_1.getanzahl_sitze() << ", Spritverbrauch: " << Auto_1.getspritverbrauch() << ", Tankinhalt: " << Auto_1.gettankinhalt() << ", Tankgrosse: " << Auto_1.gettankgroesse() << endl;
 
+	
 };
