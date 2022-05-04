@@ -4,12 +4,17 @@ using namespace std;
 
 float Klasse_Auto::fahren(float strecke)
 {
-	cin >> tankinhalt;
-	cin >> spritverbrauch;
-
-	strecke = tankinhalt - (spritverbrauch / 100.f);
-
-	cout << "Es wurde eine Strecke von " << strecke << "km zurückgelegt.";
+	float NeuerInhalt = (tankinhalt - (spritverbrauch / 100.f) * strecke);
+	if (NeuerInhalt >= 0) {
+		cout << "Du bist " << strecke << " Kilometer gefahren";
+	}
+	else {
+		cout << "Das hat nicht gereicht. Du bist nur " << (NeuerInhalt / (spritverbrauch / 100.f)) + strecke << " Kilometer gefahren:";
+		//Beispielrechnung zum Beweis der Formel bei NeuerInhalt < 0: 
+		//10l Tankinhalt (hier mit 0,05l/km = 200km Reichweite): 
+		//(10l - (5/100km)*400km) = -10k 
+		//(-10l / (5/100km)) + 400km = 200km (Wie viel km man nur geschafft hat)
+}
 }
 
 //Konstruktoren definieren:
@@ -55,7 +60,7 @@ Klasse_Auto::~Klasse_Auto()
 
 }
  
-//Tankinhalt füllen
+//Tankinhalt fÃ¼llen
 int tankinhalt;
 int gettankinhalt() const { return tankinhalt; }
 bool settankinhalt(int Tankinhalt)
